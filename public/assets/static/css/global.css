@@ -1,0 +1,29 @@
+:root {
+    --bg-color-primary: #152340;
+    --text-color-primary: #ffffff
+}
+
+
+body {
+    background-color: var(--bg-color-primary);
+    color: var(--text-color-primary);
+}
+
+.login-modal {
+    background-color: #252644 !important;
+    color: var(--text-color-primary);
+}
+
+.custom-btn-close {
+    background-color: white;
+    opacity: 1;
+}
+
+.custom-btn-close:hover {
+    background-color: #f8f9fa;
+}
+
+.custom-btn-close:before,
+.custom-btn-close:after {
+    background-color: black;
+}
