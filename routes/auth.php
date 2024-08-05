@@ -17,7 +17,7 @@ Route::post('/login', [AuthenticatedSessionController::class, 'store'])
                 ->name('login');
 
 Route::post('/forgot-password', [PasswordResetLinkController::class, 'store'])
-                ->middleware('guest')
+                ->middleware('gue st')
                 ->name('password.email');
 
 Route::post('/reset-password', [NewPasswordController::class, 'store'])
@@ -35,3 +35,12 @@ Route::post('/email/verification-notification', [EmailVerificationNotificationCo
 Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])
                 ->middleware('auth')
                 ->name('logout');
+
+
+Route::get('/api/v1/test', function () {
+    return response()->json("hello", 200);
+});
+
+Route::get('/api/token/csrf', function (Request $request) {{
+    return csrf_token();
+}});
