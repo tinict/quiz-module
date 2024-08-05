@@ -13,12 +13,7 @@ use Illuminate\Validation\Rules;
 
 class RegisteredUserController extends Controller
 {
-    /**
-     * Handle an incoming registration request.
-     *
-     * @throws \Illuminate\Validation\ValidationException
-     */
-    public function store(Request $request): Response
+    public function store(Request $request)
     {
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
